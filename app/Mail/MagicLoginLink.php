@@ -33,7 +33,7 @@ class MagicLoginLink extends Mailable
     public function build()
     {
 
-        return $this->subject('App Ku Login Verification')->markdown('emails.magic-login-link', [
+        return $this->subject('RnD Login Verification')->markdown('emails.magic-login-link', [
             'url' => URL::temporarySignedRoute('verify-login', $this->expiresAt, [
                 'token' => base64_encode($this->plainTextToken),
             ])
